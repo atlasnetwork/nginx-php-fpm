@@ -44,7 +44,7 @@ if [ ! -d "/var/www/html/.git" ]; then
      if [ -z "$GIT_USERNAME" ] && [ -z "$GIT_PERSONAL_TOKEN" ]; then
        git clone $GIT_REPO /var/www/html/
      else
-       git clone https://${GIT_USERNAME}:${GIT_PERSONAL_TOKEN}@${GIT_REPO} /var/www/html
+       git clone ${GIT_REPO} /var/www/html
      fi
    fi
    chown -Rf nginx.nginx /var/www/html
